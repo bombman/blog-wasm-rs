@@ -1,3 +1,4 @@
+use crate::components::nav::*;
 use crate::views::home::*;
 use leptos::*;
 use leptos_meta::*;
@@ -19,10 +20,10 @@ pub fn App(cx: Scope) -> impl IntoView {
         // content for this welcome page
         <Router>
             <main>
-            <div class="bg-white font-family-karla flex justify-center">
+            <div class="bg-white font-family-karla ">
 
                 <Routes>
-                    <Route path="" view=|cx| view! { cx, <Home/> }/>
+                    <Route path="" view=|cx| view! { cx,<Nav/> <Home/> }/>
                 </Routes>
             </div>
             </main>
